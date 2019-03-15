@@ -81,3 +81,10 @@ function reset() {
     document.getElementById("output_3").value = "";
     document.getElementById("score").value = "";
 }
+
+function copy() {
+    document.getElementById("input_0").value = document.getElementById("output_0").value;
+    document.getElementById("input_1").value = document.getElementById("output_1").value;
+    document.getElementById("input_2").value = document.getElementById("output_2").value;
+    document.getElementById("input_3").value = document.getElementById("output_3").value;
+}

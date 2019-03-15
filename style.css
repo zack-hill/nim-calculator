@@ -8,10 +8,16 @@ input[type=number] {
 }
 
 .input-group {
-  margin: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
-#calculate, #reset {
+.btn {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+#calculate, #reset, #copy {
   margin: 4px;
 }
 
