@@ -55,6 +55,11 @@ function getValues() {
     parseInt(document.getElementById("input_3").value)];
 }
 
+function decrement(id) {
+    var element = document.getElementById(id)
+    element.value = Math.max(parseInt(element.value) - 1, 0);
+}
+
 function submit() {
     var node = new Node(getValues());
     node.scoreChildren(0, 0, true, Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER);    

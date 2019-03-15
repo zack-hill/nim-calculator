@@ -1,24 +1,19 @@
-/* input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+  -webkit-appearance: none;
 }
 
 input[type=number] {
     -moz-appearance:textfield;
-    margin: 4px; 
 }
-
-
-*/
 
 .input-group {
-  margin: 6px;
+  margin: 4px;
 }
 
-.btn {
-  margin: 6px; 
-} 
+#calculate, #reset {
+  margin: 4px;
+}
 
 #root {
   max-width: 300px;
