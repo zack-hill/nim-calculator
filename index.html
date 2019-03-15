@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Stick Game Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <script src="script.js"></script> 
+    <div id="root">
+        <div>
+            <input id="input_0" type="number" min="0" max="1" value="1">
+            <input id="input_1" type="number" min="0" max="3" value="3">
+            <input id="input_2" type="number" min="0" max="5" value="5">
+            <input id="input_3" type="number" min="0" max="7" value="7">
+            <button onclick="submit()">Calculate</button>
+        </div>
+        <div>
+            <input id="output_0" type="number" readonly="true">
+            <input id="output_1" type="number" readonly="true">
+            <input id="output_2" type="number" readonly="true">
+            <input id="output_3" type="number" readonly="true">
+            <input id="score" type="number" readonly="true">
+        </div>
+    </div>
+  </body>
+</html>
