@@ -17,6 +17,10 @@ input[type=number] {
   margin-right: 1px;
 }
 
+.highlighted-row {
+  background-color: yellow;
+}
+
 #calculate, #reset, #copy {
   margin: 4px;
 }

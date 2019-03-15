@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
   <title>Stick Game Calculator</title>
 </head>
@@ -17,122 +17,122 @@
   <div class="col" style="max-width: 400px;">
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="addon-wrapping">Row 0</span>
+        <span class="input-group-text">Row 0</span>
       </div>
-      <input id="input_0" class="form-control" type="number" min="0" max="1">
+      <input id="input-0" class="form-control" type="number" min="0" max="1">
       <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input_0').value = 0">
+        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input-0').value = 0">
           <span class="fa fa-times-circle "></span>
         </button>
       </span>
       <span class="input-group-btn">
-        <button class="btn btn-primary" type="button" onclick="document.getElementById('input_0').stepDown()">
+        <button class="btn btn-primary" type="button" onclick="document.getElementById('input-0').stepDown()">
           <span class="fa fa-minus"></span>
         </button>
       </span>
       <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input_0').stepUp()">
+        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input-0').stepUp()">
           <span class="fa fa-plus"></span>
         </button>
       </span>
     </div>
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="addon-wrapping">Row 1</span>
+        <span class="input-group-text">Row 1</span>
       </div>
-      <input id="input_1" class="form-control" type="number" min="0" max="3">
+      <input id="input-1" class="form-control" type="number" min="0" max="3">
       <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input_1').value = 0">
+        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input-1').value = 0">
           <span class="fa fa-times-circle "></span>
         </button>
       </span>
       <span class="input-group-btn">
-        <button class="btn btn-primary" type="button" onclick="document.getElementById('input_1').stepDown()">
+        <button class="btn btn-primary" type="button" onclick="document.getElementById('input-1').stepDown()">
           <span class="fa fa-minus"></span>
         </button>
       </span>
       <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input_1').stepUp()">
+        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input-1').stepUp()">
           <span class="fa fa-plus"></span>
         </button>
       </span>
     </div>
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="addon-wrapping">Row 2</span>
+        <span class="input-group-text">Row 2</span>
       </div>
-      <input id="input_2" class="form-control" type="number" min="0" max="5">
+      <input id="input-2" class="form-control" type="number" min="0" max="5">
       <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input_2').value = 0">
+        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input-2').value = 0">
           <span class="fa fa-times-circle "></span>
         </button>
       </span>
       <span class="input-group-btn">
-        <button class="btn btn-primary" type="button" onclick="document.getElementById('input_2').stepDown()">
+        <button class="btn btn-primary" type="button" onclick="document.getElementById('input-2').stepDown()">
           <span class="fa fa-minus"></span>
         </button>
       </span>
       <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input_2').stepUp()">
+        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input-2').stepUp()">
           <span class="fa fa-plus"></span>
         </button>
       </span>
     </div>
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="addon-wrapping">Row 3</span>
+        <span class="input-group-text">Row 3</span>
       </div>
-      <input id="input_3" class="form-control" type="number" min="0" max="7">
+      <input id="input-3" class="form-control" type="number" min="0" max="7">
       <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input_3').value = 0">
+        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input-3').value = 0">
           <span class="fa fa-times-circle "></span>
         </button>
       </span>
       <span class="input-group-btn">
-        <button class="btn btn-primary" type="button" onclick="document.getElementById('input_3').stepDown()">
+        <button class="btn btn-primary" type="button" onclick="document.getElementById('input-3').stepDown()">
           <span class="fa fa-minus"></span>
         </button>
       </span>
       <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input_3').stepUp()">
+        <button class="btn btn-secondary" type="button" onclick="document.getElementById('input-3').stepUp()">
           <span class="fa fa-plus"></span>
         </button>
       </span>
     </div>
 
     <div class="input-group">
-      <button id="calculate" type="button" class="btn btn-success col " onclick="submit()">Calculate</button>
+      <button id="calculate" type="button" class="btn btn-success col " onclick="calculate()">Calculate</button>
       <button id="copy" type="button" class="btn btn-secondary col" onclick="copy()">Copy</button>
       <button id="reset" type="button" class="btn btn-danger col" onclick="reset()">Reset</button>
     </div>
 
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="addon-wrapping">Row 0</span>
+        <span class="input-group-text" id="output-label-0">Row 0</span>
       </div>
-      <input id="output_0" class="form-control" type="number" readonly="true">
+      <input id="output-0" class="form-control" type="number" readonly="true">
     </div>
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="addon-wrapping">Row 1</span>
+        <span class="input-group-text" id="output-label-1">Row 1</span>
       </div>
-      <input id="output_1" class="form-control" type="number" readonly="true">
+      <input id="output-1" class="form-control" type="number" readonly="true">
     </div>
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="addon-wrapping">Row 2</span>
+        <span class="input-group-text" id="output-label-2">Row 2</span>
       </div>
-      <input id="output_2" class="form-control" type="number" readonly="true">
+      <input id="output-2" class="form-control" type="number" readonly="true">
     </div>
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="addon-wrapping">Row 3</span>
+        <span class="input-group-text" id="output-label-3">Row 3</span>
       </div>
-      <input id="output_3" class="form-control" type="number" readonly="true">
+      <input id="output-3" class="form-control" type="number" readonly="true">
     </div>
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="addon-wrapping">Score</span>
+        <span class="input-group-text">Score</span>
       </div>
       <input id="score" class="form-control" type="number" readonly="true">
     </div>

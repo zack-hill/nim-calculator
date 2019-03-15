@@ -49,10 +49,10 @@ class Node {
 }
 
 function getValues() {
-    return [parseInt(document.getElementById("input_0").value),
-    parseInt(document.getElementById("input_1").value),
-    parseInt(document.getElementById("input_2").value),
-    parseInt(document.getElementById("input_3").value)];
+    return [parseInt(document.getElementById("input-0").value),
+    parseInt(document.getElementById("input-1").value),
+    parseInt(document.getElementById("input-2").value),
+    parseInt(document.getElementById("input-3").value)];
 }
 
 function decrement(id) {
@@ -60,31 +60,54 @@ function decrement(id) {
     element.value = Math.max(parseInt(element.value) - 1, 0);
 }
 
-function submit() {
+function calculate() {
     var node = new Node(getValues());
     node.scoreChildren(0, 0, true, Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER);    
-    document.getElementById("output_0").value = node.bestTurn[0];
-    document.getElementById("output_1").value = node.bestTurn[1];
-    document.getElementById("output_2").value = node.bestTurn[2];
-    document.getElementById("output_3").value = node.bestTurn[3];
+    document.getElementById("output-0").value = node.bestTurn[0];
+    document.getElementById("output-1").value = node.bestTurn[1];
+    document.getElementById("output-2").value = node.bestTurn[2];
+    document.getElementById("output-3").value = node.bestTurn[3];
     document.getElementById("score").value = node.score;
+    if (document.getElementById("input-0").value !== document.getElementById("output-0").value) {
+        setHighlightedOutput(0);
+    }
+    else if (document.getElementById("input-1").value !== document.getElementById("output-1").value) {
+        setHighlightedOutput(1);
+    }
+    else if (document.getElementById("input-2").value !== document.getElementById("output-2").value) {
+        setHighlightedOutput(2);
+    }
+    else if (document.getElementById("input-3").value !== document.getElementById("output-3").value) {
+        setHighlightedOutput(3);
+    }
 }
 
 function reset() {
-    document.getElementById("input_0").value = 1;
-    document.getElementById("input_1").value = 3;
-    document.getElementById("input_2").value = 5;
-    document.getElementById("input_3").value = 7;
-    document.getElementById("output_0").value = "";
-    document.getElementById("output_1").value = "";
-    document.getElementById("output_2").value = "";
-    document.getElementById("output_3").value = "";
+    document.getElementById("input-0").value = 1;
+    document.getElementById("input-1").value = 3;
+    document.getElementById("input-2").value = 5;
+    document.getElementById("input-3").value = 7;
+    document.getElementById("output-0").value = "";
+    document.getElementById("output-1").value = "";
+    document.getElementById("output-2").value = "";
+    document.getElementById("output-3").value = "";
     document.getElementById("score").value = "";
+    setHighlightedOutput(-1);
 }
 
 function copy() {
-    document.getElementById("input_0").value = document.getElementById("output_0").value;
-    document.getElementById("input_1").value = document.getElementById("output_1").value;
-    document.getElementById("input_2").value = document.getElementById("output_2").value;
-    document.getElementById("input_3").value = document.getElementById("output_3").value;
+    document.getElementById("input-0").value = document.getElementById("output-0").value;
+    document.getElementById("input-1").value = document.getElementById("output-1").value;
+    document.getElementById("input-2").value = document.getElementById("output-2").value;
+    document.getElementById("input-3").value = document.getElementById("output-3").value;
+}
+
+function setHighlightedOutput(row) {
+    document.getElementById("output-label-0").classList.remove("highlighted-row");
+    document.getElementById("output-label-1").classList.remove("highlighted-row");
+    document.getElementById("output-label-2").classList.remove("highlighted-row");
+    document.getElementById("output-label-3").classList.remove("highlighted-row");
+    if (row !== -1) {
+        document.getElementById("output-label-" + row).classList.add("highlighted-row");
+    }
 }
