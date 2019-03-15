@@ -55,29 +55,25 @@ function getValues() {
     parseInt(document.getElementById("input-3").value)];
 }
 
-function decrement(id) {
-    var element = document.getElementById(id)
-    element.value = Math.max(parseInt(element.value) - 1, 0);
-}
-
 function calculate() {
-    var node = new Node(getValues());
+    var values = getValues();
+    var node = new Node(values);
     node.scoreChildren(0, 0, true, Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER);    
-    document.getElementById("output-0").value = node.bestTurn[0];
-    document.getElementById("output-1").value = node.bestTurn[1];
-    document.getElementById("output-2").value = node.bestTurn[2];
-    document.getElementById("output-3").value = node.bestTurn[3];
+    document.getElementById("input-0").value = node.bestTurn[0];
+    document.getElementById("input-1").value = node.bestTurn[1];
+    document.getElementById("input-2").value = node.bestTurn[2];
+    document.getElementById("input-3").value = node.bestTurn[3];
     document.getElementById("score").value = node.score;
-    if (document.getElementById("input-0").value !== document.getElementById("output-0").value) {
+    if (document.getElementById("input-0").value != values[0]) {
         setHighlightedOutput(0);
     }
-    else if (document.getElementById("input-1").value !== document.getElementById("output-1").value) {
+    else if (document.getElementById("input-1").value != values[1]) {
         setHighlightedOutput(1);
     }
-    else if (document.getElementById("input-2").value !== document.getElementById("output-2").value) {
+    else if (document.getElementById("input-2").value != values[2]) {
         setHighlightedOutput(2);
     }
-    else if (document.getElementById("input-3").value !== document.getElementById("output-3").value) {
+    else if (document.getElementById("input-3").value != values[3]) {
         setHighlightedOutput(3);
     }
 }
@@ -87,27 +83,16 @@ function reset() {
     document.getElementById("input-1").value = 3;
     document.getElementById("input-2").value = 5;
     document.getElementById("input-3").value = 7;
-    document.getElementById("output-0").value = "";
-    document.getElementById("output-1").value = "";
-    document.getElementById("output-2").value = "";
-    document.getElementById("output-3").value = "";
     document.getElementById("score").value = "";
     setHighlightedOutput(-1);
 }
 
-function copy() {
-    document.getElementById("input-0").value = document.getElementById("output-0").value;
-    document.getElementById("input-1").value = document.getElementById("output-1").value;
-    document.getElementById("input-2").value = document.getElementById("output-2").value;
-    document.getElementById("input-3").value = document.getElementById("output-3").value;
-}
-
 function setHighlightedOutput(row) {
-    document.getElementById("output-label-0").classList.remove("highlighted-row");
-    document.getElementById("output-label-1").classList.remove("highlighted-row");
-    document.getElementById("output-label-2").classList.remove("highlighted-row");
-    document.getElementById("output-label-3").classList.remove("highlighted-row");
+    document.getElementById("input-label-0").classList.remove("highlighted-row");
+    document.getElementById("input-label-1").classList.remove("highlighted-row");
+    document.getElementById("input-label-2").classList.remove("highlighted-row");
+    document.getElementById("input-label-3").classList.remove("highlighted-row");
     if (row !== -1) {
-        document.getElementById("output-label-" + row).classList.add("highlighted-row");
+        document.getElementById("input-label-" + row).classList.add("highlighted-row");
     }
 }
