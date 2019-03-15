@@ -22,4 +22,5 @@ input[type=number] {
 
 #root {
   max-width: 300px;
+  margin: 12px; 
 }

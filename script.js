@@ -64,3 +64,15 @@ function submit() {
     document.getElementById("output_3").value = node.bestTurn[3];
     document.getElementById("score").value = node.score;
 }
+
+function reset() {
+    document.getElementById("input_0").value = 1;
+    document.getElementById("input_1").value = 3;
+    document.getElementById("input_2").value = 5;
+    document.getElementById("input_3").value = 7;
+    document.getElementById("output_0").value = "";
+    document.getElementById("output_1").value = "";
+    document.getElementById("output_2").value = "";
+    document.getElementById("output_3").value = "";
+    document.getElementById("score").value = "";
+}
