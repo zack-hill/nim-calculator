@@ -1,27 +1,87 @@
 <!doctype html>
-<html lang="en-US" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Stick Game Calculator</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <script src="script.js"></script> 
-    <div id="root">
-        <div>
-            <input id="input_0" type="number" min="0" max="1" value="1">
-            <input id="input_1" type="number" min="0" max="3" value="3">
-            <input id="input_2" type="number" min="0" max="5" value="5">
-            <input id="input_3" type="number" min="0" max="7" value="7">
-            <button onclick="submit()">Calculate</button>
-        </div>
-        <div>
-            <input id="output_0" type="number" readonly="true">
-            <input id="output_1" type="number" readonly="true">
-            <input id="output_2" type="number" readonly="true">
-            <input id="output_3" type="number" readonly="true">
-            <input id="score" type="number" readonly="true">
-        </div>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Stick Game Calculator</title>
+</head>
+
+<body>
+  <div id="root">
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">Row 0</span>
+      </div>
+      <input id="input_0" class="form-control" type="number" min="0" max="1" value="1">
     </div>
-  </body>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">Row 1</span>
+      </div>
+      <input id="input_1" class="form-control" type="number" min="0" max="3" value="3">
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">Row 2</span>
+      </div>
+      <input id="input_2" class="form-control" type="number" min="0" max="5" value="5">
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">Row 3</span>
+      </div>
+      <input id="input_3" class="form-control" type="number" min="0" max="7" value="7">
+    </div>
+    <button type="button" class="btn btn-primary form-control" onclick="submit()">Calculate</button>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">Row 0</span>
+      </div>
+      <input id="output_0" class="form-control" type="number" readonly="true">
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">Row 1</span>
+      </div>
+      <input id="output_1" class="form-control" type="number" readonly="true">
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">Row 2</span>
+      </div>
+      <input id="output_2" class="form-control" type="number" readonly="true">
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">Row 3</span>
+      </div>
+      <input id="output_3" class="form-control" type="number" readonly="true">
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping">Score</span>
+      </div>
+      <input id="score" class="form-control" type="number" readonly="true">
+    </div>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

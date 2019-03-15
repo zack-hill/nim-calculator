@@ -1,14 +1,25 @@
-input[type=number]::-webkit-inner-spin-button, 
+/* input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
   margin: 0; 
 }
 
 input[type=number] {
-    -moz-appearance:textfield; /* Firefox */
+    -moz-appearance:textfield;
     margin: 4px; 
 }
 
-button {
-    margin: 4px; 
+
+*/
+
+.input-group {
+  margin: 6px;
+}
+
+.btn {
+  margin: 6px; 
+} 
+
+#root {
+  max-width: 300px;
 }
